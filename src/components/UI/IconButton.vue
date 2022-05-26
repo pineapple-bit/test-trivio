@@ -15,8 +15,6 @@ export default {
   cursor: pointer;
   padding: 8px;
   border-radius: 8px;
-  height: 48px;
-  width: 48px;
   display: flex;
   align-items: center;
   justify-content: center;

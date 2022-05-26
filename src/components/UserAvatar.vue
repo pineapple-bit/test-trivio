@@ -12,12 +12,12 @@ export default {
 
 <style module>
 .root {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   background: #EFEFEF;
   text-align: center;
-  line-height: 48px;
+  line-height: 40px;
   cursor: pointer;
   transition: .5s
 }

@@ -25,7 +25,7 @@ export default {
 
 <style module>
 .root {
-  height: 32px;
+  height: 30px;
   cursor: pointer;
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div :class="[$style.root, (compact | middle) && $style.middle]" ref="navbar">
     <div :class="$style.mainNav">
-      <div :class="$style.logoWrap">
+      <div :class="[$style.logoWrap, middle && $style.middleLogo]">
         <logo-icon/>
         <icon-button @click="isOpenedNav = !isOpenedNav" v-if="compact">
-          <icon-base :name="isOpenedNav ? 'close' : 'menu'" width="28" height="28" color="#7D808A"/>
+          <icon-base :name="isOpenedNav ? 'close' : 'menu'" width="24" height="24" color="#7D808A"/>
         </icon-button>
       </div>
       <div :class="[$style.buttonsWrap, compact && getAnimation]">
@@ -23,11 +23,11 @@
       <template v-for="(item, index) in optionNav" :key="index">
         <icon-button v-if="item.badge">
           <badge-component :badge="item.badge">
-            <icon-base :name="item.name" :color="item.color" width="28" height="28"/>
+            <icon-base :name="item.name" :color="item.color" width="24" height="24"/>
           </badge-component>
         </icon-button>
         <icon-button v-else>
-          <icon-base :name="item.name" :color="item.color" width="28" height="28"/>
+          <icon-base :name="item.name" :color="item.color" width="24" height="24"/>
         </icon-button>
       </template>
       <user-avatar @click="openContextMenu"/>
@@ -142,6 +142,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.middleLogo {
+  justify-content: center;
 }
 
 .openedNav {
